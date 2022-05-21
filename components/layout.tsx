@@ -3,13 +3,22 @@ import Image from 'next/image'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+        
+// NavBar入れてもtopページのみ反映
+const name = 'Simon July'
+export const siteTitle = 'Simon July Portfolio'
 
-const name = '[Your Name]'
-export const siteTitle = 'Next.js Sample Website'
-
-export default function Layout({ children, home }) {
+export default function Layout({
+  children,
+  home
+}: {
+  children: React.ReactNode
+  home?: boolean
+}) {
   return (
+
     <div className={styles.container}>
+      
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -24,8 +33,10 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        
       </Head>
       <header className={styles.header}>
+
         {home ? (
           <>
             <Image
