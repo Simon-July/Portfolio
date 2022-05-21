@@ -100,7 +100,7 @@ const ProgressContainer = styled.div `
       background: #999;
       transform: rotate(90deg);
       position: relative;
-      top: 37rem;
+      top: 35rem;
       left: -32rem;
       width: 68rem;
         `}

@@ -1,77 +1,104 @@
-import React from 'react'
+import React, { useState, useMemo } from 'react';
 import styled, { css } from 'styled-components'
+import { pc, sp, tab } from '.././utils/media';
 
-const Hamburger = styled.div<{ isOpen: boolean }>`
-  position: absolute;
-  top: 16px;
-  right: 30px;
-  width: 22px;
-  height: 18px;
-  transition: all 0.4s;
 
-  span {
-    :nth-of-type(2) {
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate3d(-50%, -50%, 0);
-      transform: translate3d(-50%, -50%, 0);
-    }
-  }
+export default function Hamburger () {
 
-  ${(props) =>
-    props.isOpen
-      ? css`
-          span {
-            :nth-of-type(1) {
-              -webkit-transform: translateY(20px) rotate(-45deg) scale(0.8);
-              transform: translateY(8px) rotate(-45deg) scale(0.8);
-            }
+const [checked, setChecked] = useState(false);
+const handleCheckboxClick = useMemo(() => {
+  return (e) => {
+    setChecked(!checked);
+  };
+}, [checked]);
 
-            :nth-of-type(2) {
-              opacity: 0;
-            }
+    
+  return(
+    <div style = {{marginLeft: "auto"}}>
+          <CHKBox type="checkbox" checked={checked} onChange={handleCheckboxClick} /> 
 
-            :nth-of-type(3) {
-              -webkit-transform: translateY(-20px) rotate(45deg) scale(0.8);
-              transform: translateY(-7px) rotate(45deg) scale(0.8);
-            }
-          }
-        `
-      : ''}
-`
+          <HBBar></HBBar>
+          <HBBar></HBBar>
+          <HBBar></HBBar>
 
-const HamburgerLine = styled.span`
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #707070;
-  transition: all 0.4s;
+          {checked ? 
+          <Test >
+            {/* <CHKBox2 type="checkbox" checked={checked} onChange={handleCheckboxClick} />  */}
+          </Test> : ""}
 
-  &:nth-of-type(1) {
-    top: 0;
-  }
-  &:nth-of-type(2) {
-    top: 8px;
-  }
-  &:nth-of-type(3) {
-    bottom: 0;
-  }
-`
-
-type PropsType = {
-  isOpen: boolean
-  toggleIsOpen
+    </div>
+  );
 }
 
-export const MenuHamburger: React.FC<PropsType> = ({
-  isOpen,
-  toggleIsOpen,
-}) => {
-  return (
-    <Hamburger isOpen={isOpen} onClick={toggleIsOpen}>
-      <HamburgerLine />
-      <HamburgerLine />
-      <HamburgerLine />
-    </Hamburger>
-  )
-}
+const Test = styled.div`
+background-color: #053742;
+    margin-top: 1rem;
+    height: 50rem;
+    width: 30rem;
+    z-index: 99993;
+    transform: scale(-1, 1);
+`;
+
+const CHKBox2 = styled.input`
+${sp`
+    height: 3.5rem;
+    width: 45px;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; 
+    // justify-content: flex-end; imgタグ左寄せのためコメアウト
+    z-index: 99998;
+`}
+${tab`
+    display:none;
+`}
+${pc`
+    display:none;
+`}
+`;
+
+const CHKBox = styled.input`
+    ${sp`
+        height: 3.5rem;
+        width: 45px;
+        display: flex;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0; 
+        // justify-content: flex-end; imgタグ左寄せのためコメアウト
+        z-index: 99999;
+    `}
+    ${tab`
+        display:none;
+    `}
+    ${pc`
+        display:none;
+    `}
+`;
+
+const HBBar = styled.span`
+    ${sp`
+          display: block;
+          width: 37px;
+          height: 4px;
+          margin-top: 10px;
+          margin-right: 1em;
+          position: relative;
+          background: white;
+          border-radius: 3px;
+          z-index: 99999;
+          transform-origin: 4px 0px;  
+          transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+
+    `}
+    ${tab`
+        display:none;
+    `}
+    ${pc`
+        display:none;
+    `}
+`;
+
