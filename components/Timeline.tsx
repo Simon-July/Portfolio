@@ -2,12 +2,17 @@ import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { pc, sp, tab } from '../utils/media';
 
+interface RefObject<T> {
+  readonly current: T | null;
+}
+
 const Timeline = () => {
   // the width of the indicator (which is orange in color)
   const [width, setWidth] = useState(0);
 
   // this ref will be used to connected with the main content section
-  const contentRef = useRef<HTMLElement | null>(null);
+  // const contentRef = useRef<HTMLElement | null>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const scrollProgress = () => {
     // how far the user has scrolled down
