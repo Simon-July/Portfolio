@@ -5,7 +5,6 @@ export default function LangBox () {
 
   return (
       <WrapContainer>
-      <h2>学習した内容</h2>
         <Wrap>
             <ItemContainer>
                 <img src="/images/lang-logo/java-logo.png" />
@@ -30,7 +29,7 @@ export default function LangBox () {
 };
 
 const WrapContainer = styled.div`
-    margin-top: 4em;
+    /* margin-top: 4em; */
     margin-bottom: 1em;
 `;
 

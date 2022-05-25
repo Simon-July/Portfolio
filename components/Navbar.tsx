@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { pc, sp, tab } from '.././utils/media';
 import styled, { css } from 'styled-components'
 import NavMenuContents from '../components/NavMenuContents';
-import Hamburger from '../components/Hamburger';
+// import Hamburger from '../components/Hamburger';
 
 export function NavBar() {
   return (

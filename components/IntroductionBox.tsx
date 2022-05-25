@@ -5,7 +5,6 @@ export default function IntroductionBox () {
 
   return (
     <>
-    <h2>わたしの概要</h2>
     <Wrap>
     <PicWrap src="images/hobby/aomori.png" />
 

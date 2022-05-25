@@ -47,9 +47,8 @@ const Timeline = () => {
   }, []);
 
   return (
-    <>
+    <div style={{marginBottom:"3em"}}>
  
-        <h2>わたしのタイムライン</h2>
         <ProgressContainer className="progress-container">
           <BarContainer className="progress-bar" style={{ width: `${width}%` }} />
         </ProgressContainer>
@@ -94,7 +93,8 @@ const Timeline = () => {
         </YearContainer>
         </ul>
         </MainContainer>
-    </>
+
+    </div>
   );
 };
 
@@ -113,17 +113,19 @@ const ProgressContainer = styled.div `
       background: #999;
       transform: rotate(90deg);
       position: relative;
-      top: 34rem;
-      left: -32rem;
-      width: 68rem;
+      top: 32rem;
+      left: -28rem;
+      width: 60rem;
+
         `}
     ${pc`
       background: #999;
       transform: rotate(90deg);
       position: relative;
-      top: 33rem;
-      left: -32rem;
-       width: 68rem;
+      top: 30rem;
+      left: -28rem;
+      width: 60rem
+;
     `}
 `;
 

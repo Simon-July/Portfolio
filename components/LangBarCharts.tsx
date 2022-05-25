@@ -4,8 +4,8 @@ import styles from '../components/layout.module.css'
 export default function aboutMe () {
 
   return (
-    <div className={styles.container}>
-
+    // <div className={styles.container}>
+    <>
         <UlContainer>
             <BGContainer style = {{left: "0%", position:"absolute"}}></BGContainer>
             <BGContainer style = {{left: "25%"}}></BGContainer>
@@ -59,8 +59,9 @@ export default function aboutMe () {
         </ul>
 
         <UlContainer>
-            <AContainer >
+            <AContainer style = {{left: "0%"}}>
                 <LabelNameContainer>
+                    Lev.
                 </LabelNameContainer>
             </AContainer>
             <AContainer style = {{left: "25%"}}>
@@ -85,7 +86,7 @@ export default function aboutMe () {
             </AContainer>
         </UlContainer>
 
-    </div>
+    </>
   )};
 
 const BGContainer = styled.li`
@@ -107,15 +108,17 @@ const BGContainer = styled.li`
 const UlContainer = styled.ul`
   height: 100%;
   position: relative;
+  margin-right: 1em;
 `;
 
 const LabelNameContainer = styled.span`
+  font-size: 80%;
   display: block;
-  width: 100px;
+  width: 120px;
   text-align: center;
   position: absolute;
   bottom: -20px;
-  right: -50px;
+  right: -60px;
 `;
 
 const AContainer = styled.li`
