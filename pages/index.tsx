@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
+import styled from 'styled-components'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
@@ -21,8 +22,9 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd} >
-        <p>Simonのポートフォリオです、じわじわと更新していきます。</p>
-        <p>ご連絡などはTwitterの<a href="https://twitter.com/nanaseseman">DM</a>からお願いします。</p>
+        <Headline>Simonのポートフォリオです、じわじわと更新していきます。</Headline>
+        <Headline>ご連絡などはTwitterの<a href="https://twitter.com/nanaseseman">DM</a>からお願いします。</Headline>
+        <Headline>同期４人で作成したAPP紹介ページは<a href="https://ecstatic-villani-84736e.netlify.app">こちら</a>、チームリーダーが作成してくれました。</Headline>
       </section>
 
       {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -59,3 +61,7 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
+
+const Headline = styled.p`
+  font-size: 16px;
+`;
