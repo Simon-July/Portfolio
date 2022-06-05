@@ -35,7 +35,7 @@ const appsInfos = [
       work: 'チーム（2人）', 
       type: 'Next.js + JS', 
       time: '5ヶ月', 
-      link: 'http://localhost:3000/',
+      link: 'https://next-covid-chart.uw.r.appspot.com',
       gif: 'images/AppInfoGif/NCC.gif',
       explanation: 'コロナ関連データ取得アプリ', 
       difficulty: '型意識',
