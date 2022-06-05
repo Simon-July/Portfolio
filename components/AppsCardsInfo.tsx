@@ -9,62 +9,74 @@ const appsInfos = [
     
     { id: 'DDApp',
       name: 'Fake Tr●llo',
-      work: 'チーム開発（４人）',
+      work: 'チーム（４人）',
       type: 'React + Spring Boot',
       time: '5ヶ月',
-      explanation: 'Tr●lloをモデルとしたD&D(ドラッグ＆ドロップ)で操作可能なToDoアプリ',
-      difficulty: 'はじめてのReact、基本的なCRUD操作',
-      comment: 'モーダル表示/非表示の切り替え、チュートリアルGif、入力値のCRUD操作'
+      link: 'http://faketrello.herokuapp.com/login',
+      gif: 'images/AppInfoGif/Trello.gif',
+      explanation: 'D&D(ドラッグ＆ドロップ)ToDoアプリ',
+      difficulty: 'React自体への理解、基本的なCRUD操作',
+      comment: 'モーダル表示/非表示の切り替え、チュートリアルGif、入力値のCRUD操作。Tr●lloをモデルに基本的なCRUD操作を学びました。'
     },
 
     { id: 'Blackjack', 
       name: 'SPA Black Jack',
-      work: '個人開発', 
-      type: 'React + Java Script', 
-      time: '3ヶ月', 
+      work: '個人', 
+      type: 'React + JS', 
+      time: '3ヶ月',
+      link: 'https://black-jack-spa.vercel.app',
+      gif: 'images/AppInfoGif/BJ.gif',
       explanation: 'SPAで遊べるBlack Jack' ,
-      difficulty: 'componentのライフサイクルへの意識',
-      comment: '全て：新人PGの登竜門として作成しました。外部APIの利用・非同期通信など、たくさんのことを学びました。'
+      difficulty: 'componentライフサイクルへの意識',
+      comment: '全て：新人PGの登竜門として作成しました。外部APIの利用・非同期通信など、たくさんのことを学びました。つくりはかなり荒いですが許してください、いつか直します。'
     },
 
     { id: 'NextCovidCharts', 
       name: 'Next Covid Charts',
-      work: 'チーム開発（2人）', 
-      type: 'Next.js + Java Script', 
+      work: 'チーム（2人）', 
+      type: 'Next.js + JS', 
       time: '5ヶ月', 
-      explanation: 'コロナに関する様々なデータを取得できるアプリ', 
+      link: 'http://localhost:3000/',
+      gif: 'images/AppInfoGif/NCC.gif',
+      explanation: 'コロナ関連データ取得アプリ', 
       difficulty: '型意識',
       comment: 'ローディング画面、JSONデータに紐づくチャートの表示（ライブラリ使用）'
     },
 
     { id: 'EnglishConversation', 
-      name: 'KaTROPA ENGLISH HP',
-      work: '個人開発', 
+      name: 'KaTROPA ENGLISH TODAY HP',
+      work: '個人', 
       type: 'HTML + CSS + JS ', 
-      time: '４ヶ月', 
-      explanation: 'お世話になっている英会話教室のために、シンプルなHPを作成しました。' ,
-      difficulty: 'メール操作：APIを利用した',
-      comment: '全て：情報発信・新規顧客獲得の機会として、提案・提供まで一貫して行いました。社内報の執筆もし、濃い経験となりました。'
+      time: '４ヶ月',
+      link: 'https://katropa-english-today.netlify.app/index.html', 
+      gif: 'images/AppInfoGif/KET.png',
+      explanation: '英会話教室のHP' ,
+      difficulty: 'クライアントとの調整、メール機能（APIで対応）',
+      comment: '全て：お世話になっている英会話教室のために作成。情報発信・新規顧客獲得の機会として、提案・提供まで一貫して行いました。実際に申し込み可能なので、興味がある方は是非申し込んでみてください。'
     },
 
     { id: 'Portfolio', 
       name: 'Portfolio',
-      work: '個人開発', 
+      work: '個人', 
       type: 'Next.js + Type Script',
       time: '3ヶ月', 
+      link: 'https://portfolio-by-simon.vercel.app',
+      gif: 'images/AppInfoGif/PF.png',
       explanation: 'このポートフォリオです',
       difficulty: 'event系の操作全般',
       comment: '全て：自分自身の技術＋知識の情報発信の場が欲しいと思い作成に至りました。型定義に翻弄されました。'
     },
 
     { id: 'java', 
-      name: 'java',
-      work: '個人開発', 
-      type: 'java',
+      name: '検討中',
+      work: '個人', 
+      type: '多分Java',
       time: '3ヶ月', 
+      link: 'まだないです',
+      gif: 'images/Construction.png',
       explanation: '考え中',
-      difficulty: '考え中',
-      comment: '全て：'
+      difficulty: 'いろいろ苦労しそう',
+      comment: '全て'
   }
 ]
 

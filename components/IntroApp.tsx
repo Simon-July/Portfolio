@@ -21,7 +21,7 @@ export default function IntroApp() {
         // 取得されたカード情報オブジェクトをカード情報オブジェクト用useState(AppInfo)に設定
         setAppInfo(findAppInfo(id));
         setModal(" ");
-      };
+    };
 
 
     return (
@@ -31,13 +31,20 @@ export default function IntroApp() {
             <ModalContentWrap>
                     <ModalContents>
                         <h2 style = {{textAlign: "center"}}>{AppInfo.name}</h2>
-                        <ModalExplanations>開発体制：{AppInfo.work}</ModalExplanations>
-                        <ModalExplanations>言語・FW：{AppInfo.type}</ModalExplanations>
-                        <ModalExplanations>制作期間：{AppInfo.time}</ModalExplanations>
-                        <ModalExplanations>【概要】<br />{AppInfo.explanation}</ModalExplanations>
-                        <ModalExplanations>【苦労した点】<br />{AppInfo.difficulty}</ModalExplanations>
-                        <ModalExplanations>【着手箇所】<br />{AppInfo.comment}</ModalExplanations>
-                        <button onClick={() =>setModal("none")}>とじる</button>
+
+                        <ModalExWrap>
+                            <ModalExWrapImg src={AppInfo.gif} />
+                            <ModalExWrapBox>
+                                <ModalExplanations>【概要】 {AppInfo.explanation}</ModalExplanations>
+                                <ModalExplanations>【開発体制】 {AppInfo.work}</ModalExplanations>
+                                <ModalExplanations>【言語・FW】 {AppInfo.type}</ModalExplanations>
+                                <ModalExplanations>【制作期間】{AppInfo.time}</ModalExplanations>
+                                <ModalExplanations>【リンク】 <a href={AppInfo.link}>こちら</a></ModalExplanations>
+                                <ModalExplanations>【苦労した点】<br />{AppInfo.difficulty}</ModalExplanations>
+                                <ModalExplanations>【着手箇所】<br />{AppInfo.comment}</ModalExplanations>
+                                <Button onClick={() =>setModal("none")}>CLOSE</Button>
+                            </ModalExWrapBox>
+                        </ModalExWrap>
                     </ModalContents>
             </ModalContentWrap>
         </Modal>
@@ -47,14 +54,14 @@ export default function IntroApp() {
 
             <CardContainer id="DDApp" onClick={clickEvent}>
                 <LinkContainer>
-                <PicContainer src="https://pulpxstyle.com/wp-main/common/codepen/post02-codepen01.jpg" alt="" width="320px" height="200px" />
+                <PicContainer src="images/AppInfoImg/Trello.png" alt="" width="320px" height="200px" />
                 <SubTitleContainer className="time" itemProp="datePublished">2021.03.21</SubTitleContainer>
                 <TitleContainer>Fake Tr●llo</TitleContainer>
                 </LinkContainer>
             </CardContainer>
             <CardContainer id="Blackjack" onClick={clickEvent}>
                 <LinkContainer>
-                <PicContainer src="https://pulpxstyle.com/wp-main/common/codepen/post02-codepen02.jpg" alt="" width="320px" height="200px" />
+                <PicContainer src="images/AppInfoImg/BJ.png" alt="" width="320px" height="200px" />
                 <SubTitleContainer className="time" itemProp="datePublished" >2021.03.10</SubTitleContainer>
                 <TitleContainer>SPA Black Jack</TitleContainer>
                 </LinkContainer>
@@ -62,14 +69,14 @@ export default function IntroApp() {
 
             <CardContainer id="NextCovidCharts" onClick={clickEvent}>
                 <LinkContainer >
-                <PicContainer src="https://pulpxstyle.com/wp-main/common/codepen/post02-codepen03.jpg" alt="" width="320px" height="200px" />
+                <PicContainer src="images/AppInfoImg/NCC.png" alt="" width="320px" height="200px" />
                 <SubTitleContainer className="time" itemProp="datePublished">2021.03.02</SubTitleContainer>
                 <TitleContainer>Next Covid Charts</TitleContainer>
                 </LinkContainer>
             </CardContainer>
             <CardContainer id="EnglishConversation" onClick={clickEvent}>
                 <LinkContainer >
-                <PicContainer src="https://pulpxstyle.com/wp-main/common/codepen/post02-codepen01.jpg" alt="" width="320px" height="200px" />
+                <PicContainer src="images/AppInfoImg/KET.png" alt="" width="100em" height="200px" />
                 <SubTitleContainer className="time" itemProp="datePublished">2021.03.21</SubTitleContainer>
                 <TitleContainer>KaTROPA ENGLISH HP</TitleContainer>
                 </LinkContainer>
@@ -77,14 +84,14 @@ export default function IntroApp() {
 
             <CardContainer id="Portfolio" onClick={clickEvent}>
                 <LinkContainer >
-                <PicContainer src="https://pulpxstyle.com/wp-main/common/codepen/post02-codepen02.jpg" alt="" width="320px" height="200px" />
+                <PicContainer src="images/AppInfoImg/PF.png" alt="" width="320px" height="200px" />
                 <SubTitleContainer className="time" itemProp="datePublished" >2021.03.10</SubTitleContainer>
                 <TitleContainer>Portfolio</TitleContainer>
                 </LinkContainer>
             </CardContainer>
             <CardContainer id="java" onClick={clickEvent}>
                 <LinkContainer >
-                <PicContainer src="https://pulpxstyle.com/wp-main/common/codepen/post02-codepen03.jpg" alt="" width="320px" height="200px" />
+                <PicContainer src="images/Construction.png" alt="" width="320px" height="200px" />
                 <SubTitleContainer className="time" itemProp="datePublished">2021.03.02</SubTitleContainer>
                 <TitleContainer>検討中</TitleContainer>
                 </LinkContainer>
@@ -122,6 +129,7 @@ const UlContainer = styled.ul`
   
 const CardContainer = styled.div`
     border-radius: 18px;
+
     ${sp`
     margin-top: 1.5em;
     width: 80%;
@@ -200,11 +208,11 @@ const ModalContentWrap = styled.div`
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     overflow: auto;
     inset: 20px 0;
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
-    margin-top: 5em;
-    padding: 1.5em 1.7em 1.7em 1.5em;
-    max-height: 450px;
+    margin-top: 4.5em;
+    padding: 1.5em 2em 2em 1.5em;
+    max-height: 80%;
         `}
     ${tab`
     border-radius: 10px;
@@ -213,11 +221,11 @@ const ModalContentWrap = styled.div`
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     overflow: auto;
     inset: 20px 0;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
     margin-top: 5em;
-    padding: 1.5em 1.7em 1.7em 1.5em;
-    max-height: 450px;
+    padding: 1.5em 2em 2em 1.5em;
+    max-height: 80%;
         `}
     ${pc`
     border-radius: 10px;
@@ -226,11 +234,11 @@ const ModalContentWrap = styled.div`
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
     overflow: auto;
     inset: 20px 0;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 5em;
     padding: 1em 1.7em 1.7em 1.5em;
-    max-height: 500px;
+    max-height: 80%;
     `}
 `;
 
@@ -244,3 +252,63 @@ const ModalContents = styled.div`
 const ModalExplanations = styled.p`
     font-size: 15px;
 `;
+
+const ModalExWrap =  styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+`;
+
+const ModalExWrapImg =  styled.img`
+    ${sp`
+        display: block;
+        width: 100%;
+        height: auto;
+    `}
+    ${tab`
+        display: block;
+        width: 100%;
+        height: auto;
+    `}
+    ${pc`
+        display: block;
+        width: 55%;
+        height: auto;
+    `}
+`;
+  
+const ModalExWrapBox =  styled.div`
+    ${sp`
+        display: block;
+        width: 110%;
+        height: auto;
+    `}
+    ${tab`
+        display: block;
+        width: 100%;
+        height: auto;
+    `}
+    ${pc`
+        display: block;
+        width: 42%;
+        height: auto;
+    `}
+`;
+
+const Button = styled.button`
+  text-align: center;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.6em 5em;
+  font-size: 1em;
+  background-color: #053742; 
+  color: #FFF;
+  cursor: pointer;
+  border-radius: 3px; 
+  border: 0; 
+  transition: 0.3s; 
+  &:hover{
+  background-color: #1aa1ff;
+}`

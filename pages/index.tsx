@@ -25,7 +25,7 @@ export default function Home({
         <p>ご連絡などはTwitterの<a href="https://twitter.com/nanaseseman">DM</a>からお願いします。</p>
       </section>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Apps</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -40,11 +40,12 @@ export default function Home({
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       <h2 className={utilStyles.headingLg}>近況</h2>
-      <blockquote className="twitter-tweet"><p lang="ja" dir="ltr">できたーん<a href="https://twitter.com/hashtag/%E3%82%BF%E3%83%9F%E3%83%A4?src=hash&amp;ref_src=twsrc%5Etfw">#タミヤ</a>　<a href="https://twitter.com/hashtag/3%E5%87%B8?src=hash&amp;ref_src=twsrc%5Etfw">#3凸</a> <a href="https://t.co/vrYltZW7hs">pic.twitter.com/vrYltZW7hs</a></p>&mdash; Simon (@nanaseseman) <a href="https://twitter.com/nanaseseman/status/1524045992349544452?ref_src=twsrc%5Etfw">May 10, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+      <a className="twitter-timeline" data-width="550" data-height="630" data-theme="light" href="https://twitter.com/nanaseseman?ref_src=twsrc%5Etfw">Tweets by nanaseseman</a>
+      <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
       </section>
     </Layout>
   )
