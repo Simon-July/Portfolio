@@ -55,14 +55,14 @@ export default function IntroApp() {
             <CardContainer id="DDApp" onClick={clickEvent}>
                 <LinkContainer>
                 <PicContainer src="images/AppInfoImg/Trello.png" alt="" width="320px" height="200px" />
-                <SubTitleContainer className="time" itemProp="datePublished">2021.03.21</SubTitleContainer>
+                <SubTitleContainer className="time" itemProp="datePublished">2020.08.21</SubTitleContainer>
                 <TitleContainer>Fake Tr●llo</TitleContainer>
                 </LinkContainer>
             </CardContainer>
             <CardContainer id="Blackjack" onClick={clickEvent}>
                 <LinkContainer>
                 <PicContainer src="images/AppInfoImg/BJ.png" alt="" width="320px" height="200px" />
-                <SubTitleContainer className="time" itemProp="datePublished" >2021.03.10</SubTitleContainer>
+                <SubTitleContainer className="time" itemProp="datePublished" >2020.11.8</SubTitleContainer>
                 <TitleContainer>SPA Black Jack</TitleContainer>
                 </LinkContainer>
             </CardContainer>
@@ -70,14 +70,14 @@ export default function IntroApp() {
             <CardContainer id="NextCovidCharts" onClick={clickEvent}>
                 <LinkContainer >
                 <PicContainer src="images/AppInfoImg/NCC.png" alt="" width="320px" height="200px" />
-                <SubTitleContainer className="time" itemProp="datePublished">2021.03.02</SubTitleContainer>
+                <SubTitleContainer className="time" itemProp="datePublished">2021.8.25</SubTitleContainer>
                 <TitleContainer>Next Covid Charts</TitleContainer>
                 </LinkContainer>
             </CardContainer>
             <CardContainer id="EnglishConversation" onClick={clickEvent}>
                 <LinkContainer >
                 <PicContainer src="images/AppInfoImg/KET.png" alt="" width="100em" height="200px" />
-                <SubTitleContainer className="time" itemProp="datePublished">2021.03.21</SubTitleContainer>
+                <SubTitleContainer className="time" itemProp="datePublished">2021.12.28</SubTitleContainer>
                 <TitleContainer>KaTROPA ENGLISH HP</TitleContainer>
                 </LinkContainer>
             </CardContainer>
@@ -85,15 +85,15 @@ export default function IntroApp() {
             <CardContainer id="Portfolio" onClick={clickEvent}>
                 <LinkContainer >
                 <PicContainer src="images/AppInfoImg/PF.png" alt="" width="320px" height="200px" />
-                <SubTitleContainer className="time" itemProp="datePublished" >2021.03.10</SubTitleContainer>
+                <SubTitleContainer className="time" itemProp="datePublished" >2022.06.10</SubTitleContainer>
                 <TitleContainer>Portfolio</TitleContainer>
                 </LinkContainer>
             </CardContainer>
-            <CardContainer id="java" onClick={clickEvent}>
+            <CardContainer id="xCatFinder" onClick={clickEvent}>
                 <LinkContainer >
-                <PicContainer src="images/Construction.png" alt="" width="320px" height="200px" />
-                <SubTitleContainer className="time" itemProp="datePublished">2021.03.02</SubTitleContainer>
-                <TitleContainer>検討中</TitleContainer>
+                <PicContainer src="images/AppInfoImg/XCF.png" alt="" width="320px" height="200px" />
+                <SubTitleContainer className="time" itemProp="datePublished">2021.06.18</SubTitleContainer>
+                <TitleContainer>X Cat Finder</TitleContainer>
                 </LinkContainer>
             </CardContainer>
 

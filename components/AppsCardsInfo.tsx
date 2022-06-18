@@ -66,16 +66,16 @@ const appsInfos = [
       comment: '全て：自分自身の技術＋知識の情報発信の場が欲しいと思い作成に至りました。型定義に翻弄されました。'
     },
 
-    { id: 'java', 
-      name: '検討中',
+    { id: 'xCatFinder', 
+      name: 'X Cat Finder',
       work: '個人', 
-      type: '多分Java',
-      time: '3ヶ月', 
-      link: 'まだないです',
-      gif: 'images/Construction.png',
-      explanation: '考え中',
-      difficulty: 'いろいろ苦労しそう',
-      comment: '全て'
+      type: 'Next.js + Type Script',
+      time: '1ヶ月', 
+      link: 'https://cat-finder.vercel.app',
+      gif: 'images/AppInfoImg/XCF.png',
+      explanation: '猫の出会い系サイトです',
+      difficulty: 'useStateで管理するsetInterval',
+      comment: '全て：ネタとして作ったペラサイトです。無限ループ地獄でした、コールバックなどレンダーのタイミングを管理するのが難しかったです。'
   }
 ]
 
