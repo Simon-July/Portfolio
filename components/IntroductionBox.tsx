@@ -10,7 +10,7 @@ export default function IntroductionBox () {
 
     <DivBox>
         <h2>Simonとは？</h2>
-        <div style={{fontSize:"16px"}}>あだ名です。<br/>基本やり込み型の人間です。<br/>趣味ものめり込むものばかりです。<br/>住まいは都内、心は青森。</div>
+        <div style={{fontSize:"16px"}}>基本やり込み型の人間です。<br/>MBTI診断ではINTJでした。<br/>住まいは都内、心は青森。</div>
     </DivBox>
     </Wrap>
 
