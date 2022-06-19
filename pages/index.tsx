@@ -26,10 +26,10 @@ export default function Home (){
       </Head>
       <section className={utilStyles.headingMd} >
         <Headline>Simonのポートフォリオです、じわじわと更新していきます。</Headline>
+        <Headline>GitHubは<a href="https://github.com/Simon-July">こちら</a>。</Headline>
         <Headline>ご連絡などはTwitterの<a href="https://twitter.com/nanaseseman">DM</a>からお願いします。</Headline>
         <Headline>同期４人で作成したAPP紹介ページは<a href="https://ecstatic-villani-84736e.netlify.app">こちら</a>、チームリーダーが作成してくれました。</Headline>
       </section>
-
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       <h2 className={utilStyles.headingLg}>近況</h2>
